@@ -2,6 +2,8 @@
 ![BADGE](https://github.com/SnYco55/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg)
 ![BADGE](https://github.com/SnYco55/ClockSystem-TP/actions/workflows/pmd.yml/badge.svg)
 ![BADGE](https://github.com/SnYco55/ClockSystem-TP/actions/workflows/codeql.yml/badge.svg)
+![BADGE](https://github.com/SnYco55/ClockSystem-TP/actions/workflows/scorecard.yml/badge.svg)
+
 
 
 
