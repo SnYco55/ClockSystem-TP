@@ -1,14 +1,3 @@
-# For most projects, this workflow file will not need changing; you simply need
-# to commit it to your repository.
-#
-# You may wish to alter this file to override the set of languages analyzed,
-# or to provide custom queries or build logic.
-#
-# ******** NOTE ********
-# We have attempted to detect the languages in your repository. Please check
-# the `language` matrix defined below to confirm you have the correct set of
-# supported CodeQL languages.
-#
 name: "CodeQL Advanced"
 
 on:
@@ -52,7 +41,7 @@ jobs:
           gradle-version: 'current'
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: gradle build
 
       - name: Publish Test Report
         if: always()
@@ -81,6 +70,11 @@ jobs:
           java-version: '25'
           distribution: 'temurin'
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v5
+        with:
+          gradle-version: 'current'
+
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v4
         with:
@@ -92,4 +86,3 @@ jobs:
         uses: github/codeql-action/analyze@v4
         with:
           category: "/language:java"
-
